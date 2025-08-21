@@ -13,11 +13,22 @@
 
 <body>
     <header>
-        <a href="index.html">Portfolio Katri Humaloja</a>
-        <nav>
-            <a href="#expertise">Osaamiseni</a>
-            <a href="#projects">Projektit</a>
-            <a href="#contact">Yhteystiedot</a>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Portfolio Katri Humaloja</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#expertise">Osaamiseni</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projektit</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Yhteystiedot</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -105,7 +116,7 @@
                 <div class="expertise-box">
                     <i class="fas fa-pencil-ruler fa-2xl"></i>
                     <h3>UI/UX Suunnittelu</h3>
-                    <p>Olen tehnyt Figmalla prototyyppeja ja käyttöliittymäsuunnitelmia. 
+                    <p>Olen tehnyt Figmalla prototyyppeja ja käyttöliittymäsuunnitelmia.
                     </p>
                     <div class="tech-stack">
                         <span class="chip">Figma</span>
@@ -122,8 +133,8 @@
                 <div class="project-card">
                     <div class="image-container">
                         <img src="images/books1.png" alt="Etusivu">
-                        <img src="images/books2.png" alt="Kirjasivu">
-                        <img src="images/books3.png" alt="Lukutilastot">
+                        <img src="images/books2.png" alt="Kirjasivu" class="mobile-hide">
+                        <img src="images/books3.png" alt="Lukutilastot" class="mobile-hide">
                     </div>
                     <div class="text-container">
                         <h3>Kirjaseurantasovellus</h3>
@@ -156,7 +167,7 @@
                         <p>Projektissa suunnittelimme ja toteutimme verkkokaupan käyttäen Reactia
                             käyttöliittymän rakentamiseen ja MySQL tietokantaa. Verkkokaupassa käyttäjät
                             voivat selata tuotteita, lisätä niitä ostoskoriin ja tilata.
-                            </p>
+                        </p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -178,9 +189,9 @@
                 </div>
                 <div class="project-card">
                     <div class="image-container">
-                        <img src="images/yatzy1 (1).png" alt="Etusivu">
-                        <img src="images/yatzy2.png" alt="Kirjasivu">
-                        <img src="images/yatzy3.png" alt="Lukutilastot">
+                        <img src="images/yatzy1 (1).png" alt="Etusivu" class="mobile-hide">
+                        <img src="images/yatzy2.png" alt="Scoreboard" class="mobile-hide">
+                        <img src="images/yatzy3.png" alt="Pelinäkymä">
                     </div>
                     <div class="text-container">
                         <h3>Yatzy</h3>
@@ -190,7 +201,7 @@
                         </div>
                         <p>Tässä projektissa rakensin mobiilisovelluksen, joka simuloi Yatzy-pelin pelikokemusta.
                             Sovelluksessa on toteutettu muun muassa noppien heittäminen ja
-                            pistelaskenta. Pelaajat voivat tallentaa pisteensä ja tarkastella tilastoja. 
+                            pistelaskenta. Pelaajat voivat tallentaa pisteensä ja tarkastella tilastoja.
                             Projektissa hyödynnettiin React Nativea ja Expoa mobiilisovelluksen kehittämiseen. </p>
                     </div>
                 </div>
