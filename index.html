@@ -1,15 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Portfolio</title>
 </head>
+
 <body>
-    <div>
-        <p>Hello world!</p>
-    </div>
+    <header>
+        <a href="index.html">Portfolio Katri Humaloja</a>
+        <nav>
+            <a href="#expertise">Osaamiseni</a>
+            <a href="#projects">Projektit</a>
+            <a href="#contact">Yhteystiedot</a>
+        </nav>
+    </header>
+
+    <main class="cv-container">
+        <section id="hero" class="hero">
+            <div class="hero-left">
+                <img src="images/me.JPG" alt="Kuva minusta">
+            </div>
+            <div class="hero-right">
+                <h1 class="fade-in">KATRI HUMALOJA</h1>
+                <h3 class="fade-in">Tietojenkäsittelyn tradenomiopiskelija</h3>
+            </div>
+        </section>
+
+        <section id="expertise" class="expertise">
+            <h2>Osaamiseni</h2>
+            <div class="expertise-container">
+                <div class="expertise-box">
+                    <i class="fas fa-code fa-2xl"></i>
+                    <h3>Web-kehitys</h3>
+                    <p>Olen kehittänyt useita verkkosovelluksia käyttäen JavaScriptiä, Reactia ja WordPressiä. </p>
+                    <div class="tech-stack">
+                        <span class="chip">React.js</span>
+                        <span class="chip">Node.js</span>
+                        <span class="chip">HTML</span>
+                        <span class="chip">CSS</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">Django</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">GitHub</span>
+                        <span class="chip">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="expertise-box">
+                    <i class="fas fa-mobile-alt fa-2xl"></i>
+                    <h3>Mobiilikehitys</h3>
+                    <p>Olen saanut kokemusta mobiilisovellusten kehittämisestä React Native ja Expo -tekniikoilla.
+
+                    </p>
+                    <div class="tech-stack">
+                        <span class="chip">React Native</span>
+                        <span class="chip">Expo</span>
+                        <span class="chip">Firebase</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">GitHub</span>
+                    </div>
+                </div>
+                <div class="expertise-box">
+                    <i class="fas fa-database fa-2xl"></i>
+                    <h3>SQL & Backend</h3>
+                    <p>Minulla on kokemusta SQL-tietokannoista, REST-rajapinnoista ja backend-kehityksestä.</p>
+                    <div class="tech-stack">
+                        <span class="chip">SQL</span>
+                        <span class="chip">Node.js</span>
+                        <span class="chip">REST API</span>
+                        <span class="chip">Django REST Framework</span>
+                    </div>
+                </div>
+                <div class="expertise-box">
+                    <i class="fas fa-gamepad fa-2xl"></i>
+                    <h3>Unity & C#</h3>
+                    <p>Olen kehittänyt pelejä Unity-pelimoottorilla, käyttäen
+                        C#-ohjelmointikieltä. </p>
+                    <div class="tech-stack">
+                        <span class="chip">Unity</span>
+                        <span class="chip">C#</span>
+                        <span class="chip">3D/2D Pelikehitys</span>
+                        <span class="chip">Pelimekaniikat</span>
+                        <span class="chip">Animaatiot</span>
+                    </div>
+                </div>
+                <div class="expertise-box">
+                    <i class="fas fa-chart-line fa-2xl"></i>
+                    <h3>Data-analytiikka</h3>
+                    <p>Minulla on kokemusta datan analysoinnista ja visualisoinnista Pythonilla.
+                        Olen käyttänyt kirjastoja kuten Pandas, NumPy ja Matplotlib.</p>
+                    <div class="tech-stack">
+                        <span class="chip">Python</span>
+                        <span class="chip">Pandas</span>
+                        <span class="chip">NumPy</span>
+                        <span class="chip">Matplotlib</span>
+                        <span class="chip">Data Visualization</span>
+                    </div>
+                </div>
+                <div class="expertise-box">
+                    <i class="fas fa-pencil-ruler fa-2xl"></i>
+                    <h3>UI/UX Suunnittelu</h3>
+                    <p>Olen tehnyt Figmalla prototyyppeja ja käyttöliittymäsuunnitelmia. 
+                    </p>
+                    <div class="tech-stack">
+                        <span class="chip">Figma</span>
+                        <span class="chip">UI/UX Design</span>
+                        <span class="chip">Prototypointi</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projektit</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="images/books1.png" alt="Etusivu">
+                        <img src="images/books2.png" alt="Kirjasivu">
+                        <img src="images/books3.png" alt="Lukutilastot">
+                    </div>
+                    <div class="text-container">
+                        <h3>Kirjaseurantasovellus</h3>
+                        <div class="tech-stack">
+                            <span class="chip">React Native</span>
+                            <span class="chip">Expo</span>
+                            <span class="chip">Firebase</span>
+                        </div>
+                        <p>Tässä projektissa teimme mobiilisovelluksen, joka toimii kirjaseurantasovelluksena.
+                            Sovelluksen avulla käyttäjä voi lisätä kirjoja listoille kuten "Luettu", "Luen nyt" ja
+                            "Luettavana". Kirjat haettiin ulkoisesta API:sta. Sovelluksessa on myös
+                            Lukutilastot-ominaisuus, joka näyttää käyttäjälle tietoja, kuten luettujen kirjojen ja
+                            sivujen määrän vuodessa. Tietokanta ja käyttäjätiedot tallennettiin Firebaseen, ja sovellus
+                            hyödyntää Firebasea autentikoinnissa. Projektissa käytettiin React Nativea ja Expoa
+                            mobiilisovelluksen kehittämiseen. Tämä projekti auttoi minua syventämään React Native ja
+                            Firebase -osaamistani.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="images/verkkokauppa.png" alt="Verkkokaupan ostoskori">
+                    </div>
+                    <div class="text-container">
+                        <h3>Verkkokauppa</h3>
+                        <div class="tech-stack">
+                            <span class="chip">React</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">Node.js</span>
+                        </div>
+                        <p>Projektissa suunnittelimme ja toteutimme verkkokaupan käyttäen Reactia
+                            käyttöliittymän rakentamiseen ja MySQL tietokantaa. Verkkokaupassa käyttäjät
+                            voivat selata tuotteita, lisätä niitä ostoskoriin ja tilata.
+                            </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="images/projekti3.png" alt="Projekti 3">
+                    </div>
+                    <div class="text-container">
+                        <h3>Verkkokauppa</h3>
+                        <div class="tech-stack">
+                            <span class="chip">WordPress</span>
+                            <span class="chip">Azure</span>
+                        </div>
+                        <p>Tässä projektissa työskentelimme toimeksiantajan kanssa, joka valmistaa ja myy koruja.
+                            Tehtävämme oli kehittää verkkokauppa WordPressin avulla, joka olisi helppokäyttöinen ja
+                            esteettinen alusta korujen myyntiin. Verkkokauppaa ei kuitenkaan koskaan julkaistu
+                            toimeksiantajan kiireiden vuoksi, mutta projekti tarjosi meille arvokasta kokemusta
+                            verkkokauppojen kehittämisestä WordPressillä.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="images/yatzy1 (1).png" alt="Etusivu">
+                        <img src="images/yatzy2.png" alt="Kirjasivu">
+                        <img src="images/yatzy3.png" alt="Lukutilastot">
+                    </div>
+                    <div class="text-container">
+                        <h3>Yatzy</h3>
+                        <div class="tech-stack">
+                            <span class="chip">React Native</span>
+                            <span class="chip">Expo</span>
+                        </div>
+                        <p>Tässä projektissa rakensin mobiilisovelluksen, joka simuloi Yatzy-pelin pelikokemusta.
+                            Sovelluksessa on toteutettu muun muassa noppien heittäminen ja
+                            pistelaskenta. Pelaajat voivat tallentaa pisteensä ja tarkastella tilastoja. 
+                            Projektissa hyödynnettiin React Nativea ja Expoa mobiilisovelluksen kehittämiseen. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="github">
+                <a href="https://github.com/katrihumaloja" target="_blank">
+                    <button class="btn btn-success btn-large">GitHub</button>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Yhteystiedot</h2>
+            <p><a href="https://github.com/katrihumaloja" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub</a></p>
+            <p><a href="https://www.linkedin.com/in/katri-humaloja-b62982263/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> Helsinki</p>
+            <p><i class="fas fa-envelope"></i> katri.humaloja@gmail.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Katri Humaloja</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
+
 </html>
