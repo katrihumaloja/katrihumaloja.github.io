@@ -221,8 +221,8 @@ nav a:hover {
 .image-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    height: 450px; 
+    gap: 10px;
+    height: 400px; 
     align-items: center;
 }
 
