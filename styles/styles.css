@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     display: block;
+    overflow-x: hidden;
 }
 
 a {
@@ -51,7 +52,6 @@ nav a {
 
 nav a:hover {
     color: #f39c12;
-    /* Korostusväri */
 }
 
 /* Hero-osio */
@@ -146,14 +146,7 @@ nav a:hover {
     padding: 35px;
     border-radius: 12px;
     width: 360px;
-    /* Suurempi leveys */
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.expertise-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 .expertise-box h3 {
@@ -193,63 +186,83 @@ nav a:hover {
 
 .projects-container {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .project-card {
-    background: #222;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    width: 100%;
+    background-color: #222;
+    padding: 30px;
     border-radius: 12px;
-    width: 48%;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+/* Joka toinen projekti: kuvat oikealla */
+.project-card:nth-child(even) .image-container,
+.project-card:nth-child(even) .carousel-track {
+    order: 2;
 }
 
-.project-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+.project-card:nth-child(even) .text-container {
+    order: 1;
 }
 
-.image-container {
+.image-container,
+.carousel-track {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    height: 400px; 
-    align-items: center;
-}
-
-.image-container img {
+    gap: 15px;
+    align-items: flex-start;
     width: 100%;
-    height: 100%;
+}
+
+.image-container img,
+.carousel-track img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-.project-card h3 {
+.carousel-track {
+    flex-direction: row;
+}
+
+.carousel-track img {
+    flex: 1;
+    min-width: 0;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.text-container h3 {
+    font-size: 2rem;
     margin-bottom: 10px;
+    margin-top: 0;
     color: white;
-    margin-top: 10px;
 }
 
-.project-card p {
+.text-container p {
+    font-size: 1.1rem;
     line-height: 1.6;
+    color: #ddd;
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: flex-start;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    align-items: flex-start;
+    margin: 15px 0;
 }
 
 .chip {
@@ -258,19 +271,39 @@ nav a:hover {
     font-size: 1rem;
     padding: 5px 12px;
     border-radius: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+/* Mobiili */
 @media (max-width: 900px) {
-    .projects-container {
+    .project-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .project-card:nth-child(even) .image-container,
+    .project-card:nth-child(even) .carousel-track,
+    .project-card:nth-child(even) .text-container {
+        order: 0;
+    }
+
+    .image-container img,
+    .carousel-track img {
+        max-height: 350px;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .carousel-track {
         flex-direction: column;
     }
 
-    .project-card {
+    .image-container,
+    .carousel-track {
         width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 }
 
