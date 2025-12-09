@@ -277,7 +277,6 @@ nav a:hover {
 @media (max-width: 900px) {
     .project-card {
         grid-template-columns: 1fr;
-        padding: 20px;
     }
 
     .project-card:nth-child(even) .image-container,
@@ -288,7 +287,9 @@ nav a:hover {
 
     .image-container img,
     .carousel-track img {
-        max-height: 350px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .mobile-hide {
@@ -368,6 +369,7 @@ nav a:hover {
     .hero-left img {
         width: 180px;
         height: 180px;
+        margin-top: 20px;
     }
 
     .hero-right h1 {
@@ -395,7 +397,6 @@ nav a:hover {
         border-radius: 12px;
         width: 100%;
         text-align: left;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .mobile-hide {
@@ -409,7 +410,10 @@ nav a:hover {
 
     .image-container img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: contain;
     }
+
+    .text-container h3 { font-size: 1.5rem; }
+    .text-container p { font-size: 1rem; line-height: 1.4; }
 }
